@@ -1,6 +1,6 @@
 # Core Dependencies
 PySide6>=6.6.0
-mutagen>=1.47.0
+mutagen>=1.48.1
 
 # Audio Playback (VLC required - install VLC Media Player separately)
 python-vlc>=3.0.20
