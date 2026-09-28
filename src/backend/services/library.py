@@ -403,18 +403,8 @@ class LibraryServiceImpl(LibraryService):
     def search(self, query: str) -> SearchResult:
         """Search library using FTS5 tables."""
         query_lower = query.lower()
-
         cur = self.db.cursor()
 
-        # === INJECTION POINT: crash triggered by string concat bug ===
-        if True:  # Always trigger crash for repro
-            # Force string concat that will crash on special char
-            temp = query_lower + "test"
-            # Deliberate crash: None concatenation
-            result = None + "suffix"
-            del result
-        # === === === === === === === === === === === === === === === ===
-        
         # Search songs FTS5, limit to 100 results
         cur.execute("""
             SELECT songs_fts.id, songs.path, songs.title, songs.artist, songs.album, songs.album_artist,

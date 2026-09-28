@@ -56,3 +56,9 @@ htmlcov/
 
 # Lint/formatter
 .ruff_cache/
+
+# Artwork cache (runtime)
+artwork/
+
+# MusicPlayer app data (runtime)
+MusicPlayer/
