@@ -29,7 +29,7 @@ dependencies = [
     "mutagen>=1.47.0",
     "python-vlc>=3.0.20",
     "watchdog>=3.0.0",
-    "Pillow>=10.0.0",
+    "Pillow>=12.3.0",
 ]
 
 [project.optional-dependencies]

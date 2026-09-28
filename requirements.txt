@@ -11,7 +11,7 @@ python-vlc>=3.0.20
 
 # Utilities
 watchdog>=3.0.0   # file system watching for library auto-scan
-Pillow>=10.0.0    # artwork handling
+Pillow>=12.3.0    # artwork handling
 
 # Testing
 pytest>=7.4.0
