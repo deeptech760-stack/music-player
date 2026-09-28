@@ -1,0 +1,27 @@
+# Core Dependencies
+PySide6>=6.6.0
+mutagen>=1.47.0
+
+# Audio Playback (choose one - VLC preferred for format support)
+python-vlc>=3.0.20
+# pygame>=2.5.0  # fallback if VLC unavailable
+
+# Database
+# sqlite3 is stdlib
+
+# Utilities
+watchdog>=3.0.0  # file system watching for library auto-scan
+Pillow>=10.0.0   # artwork handling
+
+# Testing
+pytest>=7.4.0
+pytest-qt>=4.2.0
+pytest-cov>=4.1.0
+
+# Development
+black>=23.0.0
+ruff>=0.1.0
+mypy>=1.5.0
+
+# Packaging
+pyinstaller>=6.0.0

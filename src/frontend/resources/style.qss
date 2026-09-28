@@ -1,0 +1,184 @@
+/* Color Palette:
+   Background: #0f0f11
+   Surface: #140a18
+   SurfaceHover: #1a0d1f
+   Border: #2a1020
+   Primary: #c94f7c
+   PrimaryGlow: #e86b9a
+   PrimaryBright: #f08ab8
+   Text: #f0e8ea
+   TextSecondary: #a08090
+   TextMuted: #6a4a5a
+*/
+
+QMainWindow { background: #0f0f11; color: #f0e8ea; }
+
+QWidget { 
+    background: transparent; 
+    color: #f0e8ea; 
+    font-family: "Segoe UI", "Microsoft YaHei UI", sans-serif; 
+    font-size: 13px; 
+}
+
+/* SIDEBAR */
+#Sidebar { 
+    background: #0d0d0f; 
+    border-right: 1px solid #2a1020; 
+}
+#Sidebar QListWidget { 
+    background: transparent; 
+    border: none; 
+    outline: none; 
+    padding: 8px 0;
+}
+#Sidebar QListWidget::item { 
+    padding: 14px 16px; 
+    border-radius: 0;
+    margin: 2px 8px;
+    border-left: 3px solid transparent;
+}
+#Sidebar QListWidget::item:selected { 
+    background: rgba(201,79,124,0.12);
+    border-left: 3px solid #c94f7c;
+    color: #f0e8ea;
+}
+#Sidebar QListWidget::item:hover:!selected { 
+    background: rgba(201,79,124,0.06);
+}
+
+/* CONTENT AREA */
+#ContentArea { background: #0f0f11; }
+
+/* BUTTONS - Glassmorphism */
+QPushButton { 
+    background: rgba(26,13,20,0.8);
+    border: 1px solid #2a1020;
+    border-radius: 8px;
+    padding: 8px 16px;
+    color: #f0e8ea;
+    font-weight: 500;
+}
+QPushButton:hover { 
+    background: rgba(201,79,124,0.15);
+    border-color: #c94f7c;
+}
+QPushButton:pressed { 
+    background: rgba(201,79,124,0.25);
+}
+QPushButton:disabled { 
+    background: rgba(26,13,20,0.4);
+    color: #6a4a5a;
+    border-color: #1a0d14;
+}
+
+/* PRIMARY BUTTONS */
+QPushButton[primary="true"] { 
+    background: qlineargradient(x1:0,y1:0,x2:0,y2:1, stop:0 #d64f7c, stop:1 #c94f7c);
+    border: 1px solid #c94f7c;
+    border-radius: 20px;
+    color: white;
+}
+QPushButton[primary="true"]:hover { 
+    background: qlineargradient(x1:0,y1:0,x2:0,y2:1, stop:0 #e86b9a, stop:1 #d65f8c);
+}
+
+/* SLIDER - Progress & Volume */
+QSlider::groove:horizontal { 
+    background: #1a0d14; 
+    height: 3px; 
+    border-radius: 1.5px; 
+    border: none;
+}
+QSlider::handle:horizontal { 
+    background: #c94f7c; 
+    width: 16px; 
+    height: 16px; 
+    margin: -6.5px 0; 
+    border-radius: 8px; 
+    border: none;
+}
+QSlider::handle:horizontal:hover { 
+    background: #f08ab8;
+}
+QSlider::sub-page:horizontal { 
+    background: qlineargradient(x1:0,y1:0,x2:1,y2:0, stop:0 #c94f7c, stop:1 #e86b9a);
+    border-radius: 1.5px;
+}
+
+/* LABELS */
+QLabel { color: #f0e8ea; }
+QLabel[secondary="true"] { color: #a08090; font-size: 11px; }
+
+/* TABLES & LISTS */
+QTableWidget, QListWidget, QTreeWidget { 
+    background: #0f0f11; 
+    alternate-background-color: #140a18; 
+    gridline-color: #2a1020; 
+    border: 1px solid #2a1020; 
+    border-radius: 10px;
+    selection-background-color: rgba(201,79,124,0.15);
+    outline: none;
+}
+QHeaderView::section { 
+    background: rgba(26,13,20,0.6);
+    color: #a08090;
+    padding: 10px 8px;
+    border: none;
+    border-bottom: 1px solid #2a1020;
+    font-weight: 600;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* SCROLLBARS */
+QScrollBar:vertical { 
+    background: transparent; 
+    width: 6px; 
+    border: none; 
+    margin: 4px 2px;
+}
+QScrollBar::handle:vertical { 
+    background: #2a1020; 
+    border-radius: 3px; 
+    min-height: 30px;
+    margin: 0 2px;
+}
+QScrollBar::handle:vertical:hover { 
+    background: #c94f7c; 
+}
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical { height: 0; }
+
+/* NOW PLAYING BAR */
+#NowPlayingBar { 
+    background: rgba(15,10,20,0.95);
+    border-top: 1px solid #2a1020;
+}
+
+/* SCROLL AREA */
+QScrollArea { 
+    background: transparent; 
+    border: none;
+}
+
+/* GLASS PANELS */
+.glass-panel {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 12px;
+}
+.glass-panel:hover {
+    background: rgba(255,255,255,0.05);
+    border-color: rgba(201,79,124,0.2);
+}
+
+/* PARTICLE WIDGET */
+#ParticleWidget {
+    background: transparent;
+}
+
+/* NOW PLAYING BAR */
+#NowPlayingBar { 
+    background: rgba(15,10,20,0.92);
+    border-top: 1px solid #2a1020;
+}

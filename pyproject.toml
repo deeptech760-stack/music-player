@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "music-player"
+version = "0.1.0"
+description = "A Python music player application"
+authors = []
+
+[tool.poetry.dependencies]
+python = ">=3.8"
+
+[tool.poetry.group.dev.dependencies]
+pyinstaller = ">=5.10.0"
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.poetry.scripts]
+main = "src.main:main"
